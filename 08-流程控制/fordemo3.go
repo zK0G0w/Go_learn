@@ -27,13 +27,30 @@ func main() {
 	}
 	fmt.Println("-----------")
 
-	a := 1
-	b := 1
-	for a <= 9 {
-		for b <= 9 {
-			fmt.Printf("%dx%d=%d", a, b, a*b)
+	/*a := 1   //前面的数
+	b := 1   //后面的数
+	col := 1 //列数
+	row := 1 //行数
+	for row <= 9 {
+		for col <= 9 {
+			for m := 1; m <= row; m++ {
+				fmt.Printf("%dx%d=%d ", a, b, a*b)
+				b++
+			}
+			b = 1
 			fmt.Println()
+			row++
+			col++
 			a++
 		}
+	}
+	我的方法太笨了我靠
+	*/
+
+	for m := 1; m < 10; m++ {
+		for j := 1; j <= m; j++ {
+			fmt.Printf("%dx%d=%d\t", j, m, m*j)
+		}
+		fmt.Println()
 	}
 }
